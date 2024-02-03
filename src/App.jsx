@@ -1,19 +1,19 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import ProductList from "./pages/ProductList";
-import ProductDetails from "./components/ProductDetails";
-import NavBar from "./components/NavBar";
-import ContactForm from "./pages/ContactForm";
-import LandingPage from "./pages/LandingPage";
-import Checkout from "./pages/Checkout";
+import ProductList from "../src/pages/ProductList";
+import ProductDetails from "../src/components/ProductDetails";
+import NavBar from "../src/components/NavBar";
+import ContactForm from "../src/pages/ContactForm";
+import LandingPage from "../src/pages/LandingPage";
+import Checkout from "../src/pages/Checkout";
 import { Provider } from "react-redux";
 import Store from "../src/redux/Store";
-import Register from "./auth/RegisterPage";
-import OrderHistory from "./private/OrderHistory";
-import Login from "./auth/LoginPage";
-import { AuthProvider } from "./auth/AuthContext";
-import OrderCompleted from "./pages/OrderCompleted";
-import Footer from "./components/Footer";
+import Register from "../src/auth/RegisterPage";
+import OrderHistory from "../src/private/OrderHistory";
+import Login from "../src/auth/LoginPage";
+import { AuthProvider } from "../src/auth/AuthContext";
+import OrderCompleted from "../src/pages/OrderCompleted";
+import Footer from "../src/components/Footer";
 
 function App() {
   return (
