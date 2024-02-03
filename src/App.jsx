@@ -7,7 +7,7 @@ import ContactForm from "./pages/ContactForm";
 import LandingPage from "./pages/LandingPage";
 import Checkout from "./pages/Checkout";
 import { Provider } from "react-redux";
-import Store from "./redux/store";
+import Store from "../src/redux/Store";
 import Register from "./auth/RegisterPage";
 import OrderHistory from "./private/OrderHistory";
 import Login from "./auth/LoginPage";
