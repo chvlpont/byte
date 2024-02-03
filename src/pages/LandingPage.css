@@ -1,0 +1,68 @@
+.landing-page-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.landing-page-container .landing-page-title h1 {
+  font-size: 4rem;
+  margin-top: 2rem;
+}
+
+.landing-page-text {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+video {
+  height: 80vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.landing-page-visit-shop button {
+  padding: 0.5rem;
+  width: 10rem;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 50px;
+  letter-spacing: 0.5px;
+
+  &:hover {
+    opacity: 70%;
+    transition: ease 0.3s;
+  }
+}
+
+.black-friday {
+  background-color: rgb(202, 202, 202);
+  color: rgb(0, 0, 0);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.black-friday p {
+  display: inline-block;
+  margin-right: 20px;
+  white-space: nowrap;
+  animation: roll 10s linear infinite;
+}
+
+@keyframes roll {
+  0%,
+  100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+}

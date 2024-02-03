@@ -1,0 +1,23 @@
+.order-completed-container {
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+.order-completed-undertitle {
+  margin-top: 5px;
+}
+
+.order-completed-mail {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
+.fa-solid.fa-check {
+  margin-top: 3rem;
+  font-size: 10rem;
+  color: green;
+  background-color: rgba(245, 245, 220, 0.24);
+}

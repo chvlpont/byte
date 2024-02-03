@@ -1,0 +1,180 @@
+.checkout-container {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 70%;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.checkout-header {
+  margin-bottom: 2rem;
+}
+
+.checkout-left-side {
+  display: flex;
+  flex-direction: column;
+}
+.checkout-product-information {
+  flex: 1;
+  padding: 1rem;
+  background-color: rgb(248, 248, 248);
+  margin-left: 3rem;
+  font-weight: 600;
+}
+
+.checkout-product-name {
+  margin-bottom: 4px;
+}
+
+.item-price {
+  margin-bottom: 4px;
+}
+
+.checkout-quantity {
+  margin-bottom: 4px;
+}
+
+.checkout-left-side h1 {
+  margin: 0;
+}
+
+.checkout-product-image {
+  flex: 1;
+}
+
+.checkout-product-image img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.checkout-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cart-remove-button button,
+.cart-increase-button button {
+  border: none;
+  padding: 0.5rem;
+  background-color: rgb(214, 214, 214);
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  padding: 0.5rem;
+  margin-top: 5px;
+  border-radius: 10px;
+
+  &:hover {
+    opacity: 70%;
+    transition: ease 0.3s;
+  }
+}
+
+.cart-remove-button button:hover {
+  background-color: rgb(248, 0, 0);
+}
+
+.cart-increase-button button:hover {
+  background-color: rgb(3, 173, 3);
+}
+
+.summary {
+  margin-bottom: 2rem;
+}
+
+.checkout-right-side {
+  grid-column: 2;
+}
+
+.checkout-total-price {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(179, 179, 179, 0.295);
+  border-bottom: 1px solid rgba(179, 179, 179, 0.295);
+  padding: 5px;
+}
+
+.checkout-button {
+  text-align: center;
+  padding: 2rem;
+}
+
+.promo-code {
+  margin-bottom: 2rem;
+}
+
+.promo-form {
+  display: flex;
+  gap: 20px;
+}
+
+.promo-title {
+  margin-bottom: 1rem;
+}
+
+.promo-input {
+  width: 70%;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(158, 154, 154);
+}
+
+.promo-button {
+  width: 5rem;
+  padding: 0.5rem;
+  width: 30%;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+
+  &:hover {
+    opacity: 70%;
+    transition: ease 0.3s;
+  }
+}
+
+.checkout-button button {
+  width: 100%;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+
+  &:hover {
+    opacity: 70%;
+    transition: ease 0.3s;
+  }
+}
+
+.checkout-product-card {
+  display: flex;
+  border: 1px solid rgba(179, 179, 179, 0.295);
+  border-radius: 10px;
+}
+
+.item-description {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+.empty-bag {
+  margin-top: 1rem;
+}
+
+.empty-text {
+  margin-bottom: 0.5rem;
+}
+
+.empty-products {
+  text-decoration: underline;
+  color: rgb(0, 0, 184);
+}

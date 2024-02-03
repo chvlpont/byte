@@ -1,0 +1,121 @@
+.contact-container {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(#ada996, #f2f2f2, #dbdbdb, #eaeaea);
+  height: 100vh;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #ffffff;
+}
+
+.form-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f4f8;
+}
+
+.contact-form-and-image {
+  background-color: beige;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+.contact-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  padding: 5px;
+  width: 300px;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.form-label {
+  margin-bottom: 5px;
+}
+
+.form-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.contact-form-and-title {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin-bottom: 100px;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.form-button {
+  padding: 7px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #000000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.form-button:hover {
+  background-color: #fff;
+  color: #000000;
+}
+
+.success-message {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  color: #111;
+  padding: 20px;
+  border: none;
+  z-index: 1000;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.success-message p {
+  margin-bottom: 10px;
+}
+
+.popup-button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #111;
+  color: white;
+  font-weight: 600;
+
+  &:hover {
+    opacity: 50%;
+    transition: ease 0.3s;
+  }
+}

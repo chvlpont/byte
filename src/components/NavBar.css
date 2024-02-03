@@ -1,0 +1,103 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar-brandname {
+  margin-right: auto;
+  font-weight: 600;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  font-size: 1.1rem;
+}
+
+.cart-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-counter {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border-radius: 50%;
+}
+
+.hovered-user-div {
+  display: none;
+  position: absolute;
+}
+
+.fa-solid.fa-cart-shopping {
+  cursor: pointer;
+}
+
+.hovered-user-div {
+  display: none;
+  background-color: #ffffff;
+  padding: 10px;
+  position: absolute;
+  right: 10px;
+  transition: display 0.3s ease;
+  border-radius: 10px;
+  border: 1px solid rgb(224, 224, 224);
+}
+
+.user-container:hover .hovered-user-div {
+  display: flex;
+  text-align: center;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.hovered-user-div a:hover {
+  color: rgb(0, 0, 158);
+  text-decoration: underline;
+}
+
+.fa-regular.fa-user {
+  margin-left: 0.5rem;
+}
+
+.hovered-logout p {
+  &:hover {
+    color: rgb(0, 0, 158);
+    text-decoration: underline;
+  }
+}
