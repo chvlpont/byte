@@ -29,16 +29,13 @@ const Register = () => {
     };
 
     try {
-      const response = await fetch(
-        "https://js2-ecommerce-api.vercel.app/api/auth/register",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(userData),
-        }
-      );
+      const response = await fetch("http://localhost:9999/api/users/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      });
       console.log(response);
       const responseData = await response.json();
       console.log(responseData);

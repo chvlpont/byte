@@ -27,7 +27,7 @@ const ProductDetails = () => {
     const fetchProductDetails = async () => {
       try {
         const response = await fetch(
-          `https://js2-ecommerce-api.vercel.app/api/products/${id}`
+          `http://localhost:9999/api/products/${id}`
         );
         const data = await response.json();
         setProduct(data);

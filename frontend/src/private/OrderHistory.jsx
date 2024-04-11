@@ -19,7 +19,7 @@ const OrderHistory = () => {
     const fetchOrderHistory = async () => {
       try {
         const response = await fetch(
-          "https://js2-ecommerce-api.vercel.app/api/orders",
+          "http://localhost:9999/api/order-history",
           {
             method: "GET",
             headers: {

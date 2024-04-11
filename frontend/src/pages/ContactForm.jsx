@@ -30,21 +30,18 @@ const ContactForm = () => {
     // Send message to API
 
     try {
-      const response = await fetch(
-        "https://js2-ecommerce-api.vercel.app/api/messages",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name: formData.firstName,
-            lastName: formData.lastName,
-            email: formData.email,
-            message: formData.message,
-          }),
-        }
-      );
+      const response = await fetch("http://localhost:9999/api/messages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
 
       if (response.status === 200) {
         console.log("Data successfully sent to the API, Status: 200");

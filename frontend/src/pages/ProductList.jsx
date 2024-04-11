@@ -12,7 +12,7 @@ const ProductList = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const apiUrl = "https://js2-ecommerce-api.vercel.app/api/products";
+        const apiUrl = "http://localhost:9999/api/products";
 
         const response = await fetch(apiUrl);
         const data = await response.json();

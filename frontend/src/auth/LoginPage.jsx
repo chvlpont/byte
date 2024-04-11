@@ -39,16 +39,13 @@ const Login = () => {
     };
 
     try {
-      const response = await fetch(
-        "https://js2-ecommerce-api.vercel.app/api/auth/login",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(userData),
-        }
-      );
+      const response = await fetch("http://localhost:9999/api/users/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      });
 
       const responseData = await response.json();
 
