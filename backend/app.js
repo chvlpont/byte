@@ -1,5 +1,6 @@
 import express from "express";
 import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
+import cors from "cors";
 
 const app = express();
 
@@ -9,6 +10,9 @@ import productController from "./controllers/productController.js";
 import userController from "./controllers/userController.js";
 import orderController from "./controllers/orderController.js";
 import orderHistoryController from "./controllers/orderHistoryController.js";
+
+// Enable Cross-Origin Resource Sharing (CORS)
+app.use(cors());
 
 // Middleware to parse JSON requests
 app.use(express.json());
