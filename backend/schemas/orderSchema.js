@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// Defining the schema for orders
 const orderSchema = new mongoose.Schema(
   {
     user: {

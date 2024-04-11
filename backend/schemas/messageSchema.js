@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 
 const { Schema, model } = mongoose;
 
+// Defining the schema for messages
 const messageSchema = new Schema({
   name: {
     type: String,

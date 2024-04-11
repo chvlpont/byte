@@ -1,5 +1,6 @@
 import Order from "../schemas/orderSchema.js";
 
+// Function to save order to databse
 const saveOrder = async (req, res) => {
   const { products } = req.body;
   const userId = req.userId;

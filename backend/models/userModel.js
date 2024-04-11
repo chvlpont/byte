@@ -3,6 +3,7 @@ import asyncHandler from "express-async-handler";
 import bcrypt from "bcryptjs";
 import generateToken from "../utils/generateToken.js";
 
+// Function to register a new user
 const registerUser = asyncHandler(async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
 
@@ -17,6 +18,7 @@ const registerUser = asyncHandler(async (req, res) => {
     throw new Error("The email address is already taken");
   }
 
+  // Creating a new user document
   const user = await User.create({
     firstName,
     lastName,
@@ -24,7 +26,7 @@ const registerUser = asyncHandler(async (req, res) => {
     passwordHash: password,
   });
 
-  // Generate token
+  // Generate token for the newly registered user
   const token = generateToken(user);
 
   res.status(201).json({
@@ -37,6 +39,7 @@ const registerUser = asyncHandler(async (req, res) => {
   });
 });
 
+// Function to authenticate and login a user
 const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
@@ -52,7 +55,7 @@ const loginUser = asyncHandler(async (req, res) => {
     throw new Error("Incorrect credentials");
   }
 
-  // const result = await bcrypt.compare(password, user.passwordHash)
+  // Verifying password using bcrypt or a custom method (matchPassword)
   const result = await user.matchPassword(password);
 
   if (!result) {
@@ -60,6 +63,7 @@ const loginUser = asyncHandler(async (req, res) => {
     throw new Error("Incorrect credentials");
   }
 
+  // Sending a successful response with user details and token
   res.status(200).json({
     _id: user._id,
     firstName: user.firstName,
@@ -70,8 +74,4 @@ const loginUser = asyncHandler(async (req, res) => {
   });
 });
 
-const getUserProfile = asyncHandler(async (req, res) => {});
-
-const updateUserProfile = asyncHandler(async (req, res) => {});
-
-export { registerUser, loginUser, getUserProfile, updateUserProfile };
+export { registerUser, loginUser };

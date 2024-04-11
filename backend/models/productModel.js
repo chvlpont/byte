@@ -1,5 +1,6 @@
 import Product from "../schemas/productSchema.js";
 
+// Function to add a new product
 export const addProduct = (req, res) => {
   const { name, description, price, category, images } = req.body;
 
@@ -21,6 +22,7 @@ export const addProduct = (req, res) => {
     });
 };
 
+// Function to retrieve all products
 export const getAllProducts = (req, res) => {
   Product.find()
     .then((data) => {
@@ -33,6 +35,7 @@ export const getAllProducts = (req, res) => {
     });
 };
 
+// Function to retrieve a single product by ID
 export const getOneProduct = (req, res) => {
   Product.findById(req.params.id)
     .then((data) => {
@@ -52,6 +55,7 @@ export const getOneProduct = (req, res) => {
     });
 };
 
+// Function to update product price
 export const updateProductPrice = (req, res) => {
   const { name, price, description, category, images } = req.body;
   if (!price) {
@@ -82,6 +86,7 @@ export const updateProductPrice = (req, res) => {
     });
 };
 
+// Function to remove a product by ID
 export const removeProduct = (req, res) => {
   Product.findByIdAndDelete(req.params.id)
     .then((data) => {
