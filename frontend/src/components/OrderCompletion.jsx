@@ -6,17 +6,14 @@ const OrderCompletion = () => {
 
   const completeOrder = async (products) => {
     try {
-      const response = await fetch(
-        "https://js2-ecommerce-api.vercel.app/api/orders",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-          body: JSON.stringify({ products }),
-        }
-      );
+      const response = await fetch("http://localhost:9999/api/orders", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ products }),
+      });
 
       const responseData = await response.json();
 
