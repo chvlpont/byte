@@ -8,7 +8,7 @@ Dev Dependencies: @types/react, @types/react-dom, @vitejs/plugin-react, eslint, 
 
 
 
-Value Backend:
+Byte Backend:
 
 Description: Value Backend is a Node.js and Express.js server for handling HTTP requests, user authentication, and MongoDB data storage.
 
