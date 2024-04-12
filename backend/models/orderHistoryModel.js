@@ -11,10 +11,10 @@ const getOrderHistory = async (req, res) => {
       .populate("products.productId")
       .exec();
 
-    console.log("Order History:", orderHistory);
+    // console.log("Order History:", orderHistory);
 
     // Return the order history as a response
-    res.status(200).json({ orderHistory });
+    res.status(200).json(orderHistory);
   } catch (error) {
     console.error("Failed to fetch order history:", error);
     res.status(500).json({ error: "Failed to fetch order history" });
